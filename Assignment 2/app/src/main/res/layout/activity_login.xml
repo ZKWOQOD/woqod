@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textColor="@color/brown_color"
+            android:textSize="@dimen/_25sdp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:background="@drawable/edt_text_bg"
+            android:hint="@string/username"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="@dimen/_15sdp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dark_grey"
+            android:textSize="@dimen/_14sdp">
+
+        </androidx.appcompat.widget.AppCompatEditText>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:background="@drawable/edt_text_bg"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/_15sdp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/dark_grey"
+            android:textSize="@dimen/_14sdp">
+
+        </androidx.appcompat.widget.AppCompatEditText>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_35sdp"
+            android:background="@drawable/brown_btn_bg"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"></androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_35sdp"
+            android:background="@drawable/white_btn_bg"
+            android:text="@string/logs"
+            android:textColor="@color/brown_color"
+            android:textSize="@dimen/_15sdp"></androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/customProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_semi_transparent"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/pBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pBar"
+            android:layout_centerHorizontal="true"
+            android:text="Loading"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </RelativeLayout>
+</RelativeLayout>
